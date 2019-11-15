@@ -1,0 +1,27 @@
+{
+  "name": "@yokots/git-hooks",
+  "version": "0.1.0",
+  "description": "git-hooks",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc -p ./schematics",
+    "clean": "rm ./schematics/**/*.js",
+    "prepublishOnly": "npm run build",
+    "postpublish": "npm run clean"
+  },
+  "schematics": "./schematics/collection.json",
+  "author": {
+    "name": "yokots",
+    "email": "hd.wang1993@gmail.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
+    "husky": "^3.0.9",
+    "lint-staged": "^9.4.3"
+  },
+  "devDependencies": {
+    "typescript": "^3.6.4"
+  }
+}

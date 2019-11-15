@@ -1,0 +1,2 @@
+schematics/**/*.ts
+schematics/tsconfig.json
