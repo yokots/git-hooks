@@ -1,6 +1,6 @@
 {
   "name": "@yokots/git-hooks",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "git-hooks",
   "main": "index.js",
   "scripts": {
@@ -14,13 +14,18 @@
     "name": "yokots",
     "email": "hd.wang1993@gmail.com"
   },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:yokots/git-hooks.git"
+  },
+  "homepage": "https://github.com/yokots/git-hooks",
   "license": "MIT",
   "dependencies": {
     "@commitlint/cli": "^8.2.0",
     "@commitlint/config-conventional": "^8.2.0",
     "commitizen": "^4.0.3",
     "cz-conventional-changelog": "^3.0.2",
-    "husky": "^3.0.9",
+    "husky": "^3.1.0",
     "lint-staged": "^9.4.3"
   },
   "devDependencies": {
@@ -28,7 +33,7 @@
   },
   "config": {
     "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
+      "path": "cz-conventional-changelog"
     }
   }
 }
