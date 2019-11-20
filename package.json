@@ -1,6 +1,6 @@
 {
   "name": "@yokots/git-hooks",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "git-hooks",
   "main": "index.js",
   "scripts": {
@@ -18,10 +18,17 @@
   "dependencies": {
     "@commitlint/cli": "^8.2.0",
     "@commitlint/config-conventional": "^8.2.0",
+    "commitizen": "^4.0.3",
+    "cz-conventional-changelog": "^3.0.2",
     "husky": "^3.0.9",
     "lint-staged": "^9.4.3"
   },
   "devDependencies": {
     "typescript": "^3.6.4"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }

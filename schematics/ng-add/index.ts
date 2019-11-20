@@ -1,11 +1,12 @@
 import { Rule, SchematicContext, Tree, SchematicsException, noop } from '@angular-devkit/schematics';
 import { NodePackageInstallTask } from '@angular-devkit/schematics/tasks';
-import { name, version } from '../../package.json';
+import { name, version, config } from '../../package.json';
 
 const husky = {
   hooks: {
     "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
     "pre-commit": "lint-staged",
+    "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true",
   },
 };
 
@@ -46,6 +47,7 @@ export default function(): Rule {
     pkg['husky']= husky;
     pkg['commitlint'] = commitlint;
     pkg['lint-staged'] = lingStaged;
+    pkg['config'] = config;
 
     tree.overwrite('/package.json', JSON.stringify(pkg, null, 2));
 
